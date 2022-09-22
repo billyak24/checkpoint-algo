@@ -1,0 +1,53 @@
+checkpoint Algorithm 
+
+VARIABLES:
+
+VAR inputString : String;
+VAR index, lengthCounter, spaceCounter, vowelsCounter : Integer;
+
+BEGIN
+    lengthCounter := 0;
+    spaceCounter := 0;
+    vowelsCounter := 0;
+
+    WRITELN("Input your sentence that ends with . :");
+   
+   
+   
+   
+     READLN(inputString);
+
+    WHILE(inputString[index] <> ".") DO
+        BEGIN
+            lengthCounter++
+           
+        END;
+    ENDWHILE;
+
+    WHILE(inputString[index] = " ") DO
+        BEGIN
+     spaceCounter++
+            index++
+        END;
+    ENDWHILE;
+
+    FOR index FROM 1 TO lengthCounter DO
+        BEGIN
+            SWITCH(inputString[index]) DO
+                
+        CASE "A": vowelsCounter = vowelsCounter + 1; BREAK;
+                CASE "E": vowelsCounter = vowelsCounter + 1; BREAK;
+        CASE "I": vowelsCounter = vowelsCounter + 1; BREAK;
+            CASE "O": vowelsCounter = vowelsCounter + 1; BREAK;
+                vowelsCounter = vowelsCounter + 0;
+     ENDSWITCH;
+        END;
+    ENDFOR
+
+    WRITELN("The lenght of the sentence is : " + lengthCounter)
+    
+WRITELN("The number of words in the sentence is : " + spaceCounter+1)
+
+
+ WRITELN("The number of vowels in the sentence is : " + vowelsCounter)
+END;
